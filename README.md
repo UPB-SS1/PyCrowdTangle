@@ -17,6 +17,10 @@ VSCODE
 ## StyleGuide
 http://google.github.io/styleguide/pyguide.html
 
+## Considerations
+API keys safe (You can store your API key in an environment variable)
+avoid hitting rate limits.
+
 ## References
 - first examples https://www.geeksforgeeks.org/get-post-requests-using-python/
 - API reference https://github.com/CrowdTangle/API/wiki
