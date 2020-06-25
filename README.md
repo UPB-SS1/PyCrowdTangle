@@ -16,3 +16,8 @@ VSCODE
 
 ## StyleGuide
 http://google.github.io/styleguide/pyguide.html
+
+## References
+- https://www.geeksforgeeks.org/get-post-requests-using-python/
+- https://github.com/CrowdTangle/API/wiki
+- https://semaphoreci.com/community/tutorials/building-and-testing-an-api-wrapper-in-python
