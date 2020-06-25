@@ -18,6 +18,8 @@ VSCODE
 http://google.github.io/styleguide/pyguide.html
 
 ## References
-- https://www.geeksforgeeks.org/get-post-requests-using-python/
-- https://github.com/CrowdTangle/API/wiki
+- first examples https://www.geeksforgeeks.org/get-post-requests-using-python/
+- API reference https://github.com/CrowdTangle/API/wiki
 - https://semaphoreci.com/community/tutorials/building-and-testing-an-api-wrapper-in-python
+- cookiecutter https://github.com/AllenCellModeling/cookiecutter-pypackage
+- build a python package simple https://towardsdatascience.com/build-your-first-open-source-python-project-53471c9942a7
