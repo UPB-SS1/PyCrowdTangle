@@ -12,7 +12,6 @@ setup(
     version="0.0.1",
     author="Jose R. Zapata",
     author_email="jjrzg@hotmail.com",
-    url = 'https://joserzapata.github.io/',
     description="A Python Wrapper To Retrieve Data From The CrowdTangle API",
     license='MIT',
     long_description=readme,
