@@ -25,3 +25,4 @@ avoid hitting rate limits.
 - https://semaphoreci.com/community/tutorials/building-and-testing-an-api-wrapper-in-python
 - cookiecutter https://github.com/AllenCellModeling/cookiecutter-pypackage
 - build a python package simple https://towardsdatascience.com/build-your-first-open-source-python-project-53471c9942a7
+- https://medium.com/@joel.barmettler/how-to-upload-your-python-package-to-pypi-65edc5fe9c56

@@ -3,16 +3,6 @@
 
 import requests
 
-# save in a file called api-key.txt file
-# your api-key at your proyect folder
-try:
-    with open("apikey.txt", "r") as file:
-        apikey = file.readline()
-        api_token = apikey.strip('\n')
-except:
-    print("api-key.txt not found")
-
-
 def ct_get_posts(count=100, start_date="", end_date="", api_token=""):
     """Retrieve a set of posts for the given parameters get post from crowdtangle 
 
@@ -29,6 +19,9 @@ def ct_get_posts(count=100, start_date="", end_date="", api_token=""):
         [dict]: The Response contains both a status code and a result. The status will always
                 be 200 if there is no error. The result contains an array of post objects and
                 a pagination object with URLs for both the next and previous page, if they exist
+
+    Example:
+        ct_get_posts(api_token="AKJHXDFYTGEBKRJ6535")                    
     """
 
     # api-endpoint
