@@ -8,8 +8,8 @@ with open("README.md", "r") as readme_file:
 
 setup(
     name="PyCrowdTangle",
-    packages = find_packages(),
-    version="0.0.2",
+    packages = find_packages(include=['PyCrowdTangle']),
+    version="0.0.3",
     author="Jose R. Zapata",
     author_email="jjrzg@hotmail.com",
     description="A Python Wrapper To Retrieve Data From The CrowdTangle API",
