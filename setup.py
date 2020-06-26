@@ -17,7 +17,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/UPB-SS1/PyCrowdTangle",
-    install_requires=['request'],
+    install_requires=['requests'],
     classifiers=[
         "Programming Language :: Python :: 3.7",
         "License :: OSI Approved :: MIT License",
