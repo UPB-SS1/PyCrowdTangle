@@ -3,6 +3,30 @@
 
 import requests
 
+def ct_get_links(link,count=100, start_date="", end_date="", api_token=""):
+    
+    if not link: raise ValueError("link was empty")
+    if not api_token, raise ValueError("api_token variable is empty")
+
+    # api-endpoint
+    URL_BASE = "https://api.crowdtangle.com/links"
+
+    # defining a params dict for the parameters to be sent to the API
+    PARAMS = {'count': count, 'token': api_token}
+
+    # add params parameters
+    if start_date:
+        PARAMS['startDate'] = start_date
+    if start_date:
+        PARAMS['endDate'] = end_date
+
+    # sending get request and saving the response as response object
+    r = requests.get(url=URL_BASE, params=PARAMS)
+    # status = r.status_code
+    return r.json()
+
+
+
 def ct_get_posts(count=100, start_date="", end_date="", api_token=""):
     """Retrieve a set of posts for the given parameters get post from crowdtangle 
 
@@ -23,6 +47,7 @@ def ct_get_posts(count=100, start_date="", end_date="", api_token=""):
     Example:
         ct_get_posts(api_token="AKJHXDFYTGEBKRJ6535")                    
     """
+    if not api_token, raise ValueError("api_token variable is empty")
 
     # api-endpoint
     URL_BASE = "https://api.crowdtangle.com/posts"
