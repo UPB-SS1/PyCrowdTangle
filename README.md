@@ -3,6 +3,16 @@ A Python Wrapper To Retrieve Data From The CrowdTangle API
 
 https://github.com/CrowdTangle/API
 
+
+## Install
+
+```
+pip install PyCrowdTangle
+```
+### Update
+```
+pip install PyCrowdTangle -U
+```
 ## Usage
 
 ### ct_get_posts
@@ -42,4 +52,3 @@ df = pd.DataFrame(data['result']['posts'])
 #show results
 df.head()
 ```
-
