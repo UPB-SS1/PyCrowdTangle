@@ -52,3 +52,18 @@ df = pd.DataFrame(data['result']['posts'])
 #show results
 df.head()
 ```
+
+### ct_get_lists
+```python
+import PyCrowdTangle as pct
+
+#retrieve data from CrowdTangle
+# get the api_token from https://apps.crowdtangle.com/
+# you can locate your API token via your crowdtangle dashboard
+# under Settings > API Access.
+
+data = pct.ct_get_lists(api_token="AKJHXDFYTGEBKRJ6535")
+
+#show results
+print(data)
+```

@@ -93,3 +93,27 @@ def ct_get_posts(count=100, start_date="", end_date="", api_token=""):
     r = requests.get(url=URL_BASE, params=PARAMS)
     # status = r.status_code
     return r.json()
+
+def ct_get_lists(api_token=""):
+    """Retrieve the lists, saved searches and saved post lists of the dashboard associated with the token sent in
+
+    Args:
+        api_token (str, optional): you can locate your API token via your crowdtangle dashboard
+                                   under Settings > API Access.
+    Returns:
+        [dict]: The Response contains both a status code and a result. The status will always
+                be 200 if there is no error. The result contains an array of a lists objects
+
+    Example:
+        ct_get_lists(api_token="AKJHXDFYTGEBKRJ6535")                    
+    """
+    
+    # api-endpoint
+    URL_BASE = "https://api.crowdtangle.com/lists"
+    # defining a params dict for the parameters to be sent to the API
+    PARAMS = {'token': api_token}
+
+    # sending get request and saving the response as response object
+    r = requests.get(url=URL_BASE, params=PARAMS)
+    # status = r.status_code
+    return r.json()    
