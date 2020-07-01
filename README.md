@@ -1,8 +1,6 @@
 # PyCrowdTangle
-A Python Wrapper To Retrieve Data From The CrowdTangle API
 
-https://github.com/CrowdTangle/API
-
+A Python Wrapper To Retrieve Data From The [CrowdTangle API](https://github.com/CrowdTangle/API)
 
 ## Install
 
@@ -13,6 +11,10 @@ pip install PyCrowdTangle
 ```
 pip install PyCrowdTangle -U
 ```
+## Example
+
+![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UPB-SS1/PyCrowdTangle/blob/master/examples/pycrowdtangle_example.ipynb)
+
 ## Usage
 
 ### ct_get_posts
