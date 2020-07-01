@@ -34,3 +34,4 @@ Upload to pip
 - build a python package simple https://towardsdatascience.com/build-your-first-open-source-python-project-53471c9942a7
 - https://medium.com/@joel.barmettler/how-to-upload-your-python-package-to-pypi-65edc5fe9c56
 - https://dzone.com/articles/executable-package-pip-install
+- create documentation spinx https://jackmckew.dev/automatically-generate-documentation-with-sphinx.html
