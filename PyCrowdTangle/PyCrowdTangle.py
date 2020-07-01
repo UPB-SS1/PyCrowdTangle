@@ -51,8 +51,13 @@ def ct_get_links(link, platforms='facebook', count=100, start_date="", end_date=
 
     # sending get request and saving the response as response object
     r = requests.get(url=URL_BASE, params=PARAMS)
-    # status = r.status_code
-    return r.json()
+    if r.status_code != 200:
+        out = r.json()
+        print(f"status: {out['status']}")
+        print(f"Code error: {out['code']}")
+        print(f"Message: {out['message']}")
+    else:
+        return r.json()
 
 
 def ct_get_posts(count=100, start_date="", end_date="", api_token=""):
@@ -91,8 +96,13 @@ def ct_get_posts(count=100, start_date="", end_date="", api_token=""):
 
     # sending get request and saving the response as response object
     r = requests.get(url=URL_BASE, params=PARAMS)
-    # status = r.status_code
-    return r.json()
+    if r.status_code != 200:
+        out = r.json()
+        print(f"status: {out['status']}")
+        print(f"Code error: {out['code']}")
+        print(f"Message: {out['message']}")
+    else:
+        return r.json()
 
 def ct_get_lists(api_token=""):
     """Retrieve the lists, saved searches and saved post lists of the dashboard associated with the token sent in
@@ -115,5 +125,10 @@ def ct_get_lists(api_token=""):
 
     # sending get request and saving the response as response object
     r = requests.get(url=URL_BASE, params=PARAMS)
-    # status = r.status_code
-    return r.json()    
+        if r.status_code != 200:
+        out = r.json()
+        print(f"status: {out['status']}")
+        print(f"Code error: {out['code']}")
+        print(f"Message: {out['message']}")
+    else:
+        return r.json()   
