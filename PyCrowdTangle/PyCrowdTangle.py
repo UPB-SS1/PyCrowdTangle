@@ -3,7 +3,6 @@
 
 import requests
 
-
 def ct_get_links(link, platforms='facebook', count=100, start_date="", end_date="", api_token=""):
     """ Retrieve a set of posts matching a certain link.
 

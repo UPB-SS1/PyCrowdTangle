@@ -1,6 +1,6 @@
 """Top-level package for PyCrowdTangle"""
 __author__ = """Jose R. Zapata"""
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 from .PyCrowdTangle import ct_get_posts
 from .PyCrowdTangle import ct_get_links
