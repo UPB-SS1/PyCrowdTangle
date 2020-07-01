@@ -19,6 +19,13 @@ http://google.github.io/styleguide/pyguide.html
 API keys safe (You can store your API key in an environment variable)
 avoid hitting rate limits.
 
+## Build package
+Compile package
+`python setup.py bdist_wheel`
+
+Upload to pip
+`twine upload dist/*`
+
 ## References
 - first examples https://www.geeksforgeeks.org/get-post-requests-using-python/
 - API reference https://github.com/CrowdTangle/API/wiki
