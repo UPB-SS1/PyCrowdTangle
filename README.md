@@ -13,7 +13,7 @@ pip install PyCrowdTangle -U
 ```
 ## Example
 
-![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UPB-SS1/PyCrowdTangle/blob/master/examples/pycrowdtangle_example.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UPB-SS1/PyCrowdTangle/blob/master/examples/pycrowdtangle_example.ipynb)
 
 ## Usage
 
