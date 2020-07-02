@@ -124,10 +124,10 @@ def ct_get_lists(api_token=""):
 
     # sending get request and saving the response as response object
     r = requests.get(url=URL_BASE, params=PARAMS)
-        if r.status_code != 200:
+    if r.status_code != 200:
         out = r.json()
         print(f"status: {out['status']}")
         print(f"Code error: {out['code']}")
         print(f"Message: {out['message']}")
     else:
-        return r.json()   
+        return r.json()
