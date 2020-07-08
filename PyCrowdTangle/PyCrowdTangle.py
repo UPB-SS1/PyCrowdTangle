@@ -93,7 +93,7 @@ def ct_get_posts(count=100, start_date="", end_date="", api_token=""):
     # add params parameters
     if start_date:
         PARAMS['startDate'] = start_date
-    if start_date:
+    if end_date:
         PARAMS['endDate'] = end_date
 
     # sending get request and saving the response as response object
