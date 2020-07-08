@@ -3,7 +3,8 @@
 
 import requests
 
-def ct_get_links(link, platforms='facebook', count=100, start_date="", end_date="", api_token=""):
+def ct_get_links(link, platforms='facebook', count=100, start_date="",
+                include_history="", end_date="", api_token=""):
     """ Retrieve a set of posts matching a certain link.
 
     Args:
@@ -47,6 +48,8 @@ def ct_get_links(link, platforms='facebook', count=100, start_date="", end_date=
         PARAMS['startDate'] = start_date
     if start_date:
         PARAMS['endDate'] = end_date
+    if include_history == 'true':
+        PARAMS['includeHistory'] =  true
 
     # sending get request and saving the response as response object
     r = requests.get(url=URL_BASE, params=PARAMS)
