@@ -3,8 +3,9 @@
 
 import requests
 
-def ct_get_links(link, platforms='facebook', count=100, start_date="",
-                include_history="", end_date="", api_token=""):
+def ct_get_links(link, platforms='facebook', count=100, start_date='',
+                end_date='', include_history='', include_summary='false', 
+                offset = 0, sortBy = 'date', api_token=''):
     """ Retrieve a set of posts matching a certain link.
 
     Args:
@@ -19,6 +20,22 @@ def ct_get_links(link, platforms='facebook', count=100, start_date="",
                                   Time zone is UTC. Format is “yyyy-mm-ddThh:mm:ss”
                                   or “yyyy-mm-dd” (defaults to time 00:00:00).
                                   Defaults to "now".
+        include_history (str, optional): Includes timestep data for growth of each post returned.
+                                         Defaults to null (not included). options: 'true'
+        include_summary (str, optional): Adds a "summary" section with AccountStatistics for 
+                                         each platform that has posted this link. It will look beyond 
+                                         the count requested to summarize across the time searched. 
+                                         Requires a value for startDate.
+                                         Defaults to false. options: 'true' , 'false'
+
+        offset (int, optional):   The number of posts to offset (generally used for pagination). 
+                                  Pagination links will also be provided in the response.
+                                  Defaults to 0. options >= 0
+
+        sortBy (str, optional):   The method by which to order posts (defaults to the most recent).
+                                  If subscriber_count, a startDate is required.
+                                  Defaults to 'date'. options: 'subscriber_count' , 'total_interactions'
+
         api_token (str, optional): you can locate your API token via your crowdtangle dashboard
                                    under Settings > API Access.
 
@@ -41,7 +58,10 @@ def ct_get_links(link, platforms='facebook', count=100, start_date="",
 
     # defining a params dict for the parameters to be sent to the API
     PARAMS = {'link': link, 'count': count,
-              'token': api_token, 'platforms': platforms}
+              'token': api_token, 'platforms': platforms, 
+              'includeSummary': include_summary , 'offset': offset,
+              'sortBy': sortBy
+            }
 
     # add params parameters
     if start_date:
@@ -49,7 +69,7 @@ def ct_get_links(link, platforms='facebook', count=100, start_date="",
     if end_date:
         PARAMS['endDate'] = end_date
     if include_history == 'true':
-        PARAMS['includeHistory'] =  true
+        PARAMS['includeHistory'] =  'true'
 
     # sending get request and saving the response as response object
     r = requests.get(url=URL_BASE, params=PARAMS)
