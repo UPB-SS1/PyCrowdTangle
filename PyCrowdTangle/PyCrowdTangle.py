@@ -46,7 +46,7 @@ def ct_get_links(link, platforms='facebook', count=100, start_date="",
     # add params parameters
     if start_date:
         PARAMS['startDate'] = start_date
-    if start_date:
+    if end_date:
         PARAMS['endDate'] = end_date
     if include_history == 'true':
         PARAMS['includeHistory'] =  true
