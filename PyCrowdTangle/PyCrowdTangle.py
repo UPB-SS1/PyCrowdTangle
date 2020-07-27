@@ -9,7 +9,7 @@ def ct_get_links(link, platforms='facebook', count=100, start_date= None,
     """ Retrieve a set of posts matching a certain link.
 
     Args:
-        link ([type]): [description]
+        link (str): The link to query by. Required.
         platforms (str, optional): The platforms from which to retrieve links. This value can be comma-separated.
                                    options: facebook, instagram, reddit. Defaults to 'facebook'.
         count (int, optional): The number of posts to return. Defaults to 100. options [1-100]
@@ -50,7 +50,8 @@ def ct_get_links(link, platforms='facebook', count=100, start_date= None,
     
     Example:
         ct_get_links(link= 'http://www.queenonline.com/', platforms='facebook',
-                     start_date='2019-01-01',api_token="AKJHXDFYTGEBKRJ6535")
+                     start_date='2019-01-01', include_history = 'true',
+                     sortBy = 'date', api_token="AKJHXDFYTGEBKRJ6535")
     """
 
     # api-endpoint
