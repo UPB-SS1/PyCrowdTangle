@@ -187,5 +187,4 @@ def ct_get_lists(api_token=""):
         print(f"status: {out['status']}")
         print(f"Code error: {out['code']}")
         print(f"Message: {out['message']}")
-    else:
-        return r.json()
+    return r.json()
