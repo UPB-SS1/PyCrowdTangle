@@ -78,8 +78,7 @@ def ct_get_links(link, platforms='facebook', count=100, start_date= None,
         print(f"status: {out['status']}")
         print(f"Code error: {out['code']}")
         print(f"Message: {out['message']}")
-    else:
-        return r.json()
+    return r.json()
 
 
 def ct_get_posts(count=100, start_date= None, end_date= None, include_history= None,
@@ -158,8 +157,7 @@ def ct_get_posts(count=100, start_date= None, end_date= None, include_history= N
         print(f"status: {out['status']}")
         print(f"Code error: {out['code']}")
         print(f"Message: {out['message']}")
-    else:
-        return r.json()
+    return r.json()
 
 def ct_get_lists(api_token=""):
     """Retrieve the lists, saved searches and saved post lists of the dashboard associated with the token sent in
