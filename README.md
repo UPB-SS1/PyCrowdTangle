@@ -69,3 +69,11 @@ data = pct.ct_get_lists(api_token="AKJHXDFYTGEBKRJ6535")
 #show results
 print(data)
 ```
+
+
+## Acknowledgements
+
+CooRnet has been developed as part of the project [Social Media Behaviour](https://upb-ss1.github.io/) research project activities.
+
+The project is supported by a the Social Media and Democracy Research Grants from Social Science Research Council (SSRC). Data and tools provided by Facebook.
+
