@@ -2,6 +2,9 @@
 
 A Python Wrapper To Retrieve Data From The [CrowdTangle API](https://github.com/CrowdTangle/API)
 
+[https://pypi.org/project/PyCrowdTangle](https://pypi.org/project/PyCrowdTangle/)
+
+
 ## Install
 
 ```
